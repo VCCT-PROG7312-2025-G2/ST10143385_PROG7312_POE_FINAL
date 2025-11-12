@@ -12,7 +12,8 @@ The goal here is to improve communication, engagement, and transparency between 
 -  **Local Events & Announcements** — Browse and filter community events  
 -  **Report Submission** — Submit community issue reports  
 -  **Recommended Events** — Suggestions based on recent searches done by the user 
--  **Search and Filter System** — Quickly filter events by date or category  
+-  **Search and Filter System** — Quickly filter events by date or category
+-  **Service Request** - Allows user to send/track a request and view all submitted requests
 
 ---
 
