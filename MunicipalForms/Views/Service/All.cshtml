@@ -121,6 +121,7 @@
                         <tr>
                             <th class="ps-4">ID</th>
                             <th>DESCRIPTION</th>
+                            <th>LOCATION</th> 
                             <th>CATEGORY</th>
                             <th>SUBMITTED AT</th>
                             <th>STATUS</th>
@@ -129,7 +130,7 @@
                     </thead>
                     <tbody id="requestsTable">
                         <tr>
-                            <td colspan="6" class="text-center py-5 empty-state">
+                            <td colspan="7" class="text-center py-5 empty-state">
                                 No requests submitted yet. Be the first!
                             </td>
                         </tr>
@@ -161,13 +162,14 @@
             if (priFilter) data = data.filter(r => r.priority === +priFilter);
 
             tbody.innerHTML = data.length === 0
-                ? `<tr><td colspan="6" class="text-center py-5 empty-state">
+                ? `<tr><td colspan="7" class="text-center py-5 empty-state">
                      ${catFilter || priFilter ? 'No requests match your filters.' : 'No requests submitted yet. Be the first!'}
                    </td></tr>`
                 : data.map(r => `
                     <tr>
                         <td class="ps-4"><code>${r.id}</code></td>
                         <td class="text-truncate" style="max-width: 250px;">${r.description}</td>
+                        <td class="text-truncate">${r.location || '-'}</td> <!-- ✅ Added -->
                         <td><span class="badge bg-light text-dark">${r.category}</span></td>
                         <td class="small text-muted">${r.submittedAt}</td>
                         <td><span class="badge bg-secondary">${r.status}</span></td>
