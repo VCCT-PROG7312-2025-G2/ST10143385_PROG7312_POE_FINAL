@@ -93,10 +93,16 @@ Below are preview images showcasing key pages of the **MunicipalForms** web appl
 After lots of research on city services, and current web development methods, I would like to acknowledge these sources:
 
 - **Bill Wagner** (n.d.). *C# Documentation — Get Started, Tutorials, Reference.* [Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/)  
-- **GordonBooker** (2017). *Custom C# Card View Type Control.* [Stack Overflow](https://stackoverflow.com/questions/45014556/custom-c-sharp-card-view-type-control)  
-- **The Modern JavaScript Tutorial** (2019). [JavaScript.info](https://javascript.info/)  
+- **DotNetPerls** (2023). *Graph Data Structures in C#.* Available at: [https://www.dotnetperls.com](https://www.dotnetperls.com)  
+- **GeeksforGeeks** (2024). *AVL Tree (Set 1) – Insertion.* Available at: [https://www.geeksforgeeks.org/avl-tree-set-1-insertion/](https://www.geeksforgeeks.org/avl-tree-set-1-insertion/)  
+- **GeeksforGeeks** (2024). *Graph and Its Representations.* Available at: [https://www.geeksforgeeks.org/graph-and-its-representations/](https://www.geeksforgeeks.org/graph-and-its-representations/)  
+- **GeeksforGeeks** (2024). *Min Heap in Data Structure.* Available at: [https://www.geeksforgeeks.org/min-heap-in-data-structure/](https://www.geeksforgeeks.org/min-heap-in-data-structure/)  
+- **GeeksforGeeks** (2024). *Red-Black Tree Introduction.* Available at: [https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/](https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/)  
 - **Mark Otto** (2025). *Bootstrap Team.* [GetBootstrap.com](https://getbootstrap.com/docs/5.0/about/team/)  
-- **Uxcel** (n.d.). *The Best Way to Learn UX/UI Design.* [Uxcel Glossary](https://app.uxcel.com/glossary/human-interface-guidelines)
+- **The Modern JavaScript Tutorial** (2019). [JavaScript.info](https://javascript.info/)  
+- **TutorialsPoint** (2024). *Binary Search Tree Data Structure.* Available at: [https://www.tutorialspoint.com/data_structures_algorithms/binary_search_tree.htm](https://www.tutorialspoint.com/data_structures_algorithms/binary_search_tree.htm)  
+- **Uxcel** (n.d.). *The Best Way to Learn UX/UI Design.* [Uxcel Glossary](https://app.uxcel.com/glossary/human-interface-guidelines)  
+
 
 ---
 While dveloping the mvc website, AI tools were used as additional tools to help me improve and understand the complex design pattern. Even thought these tools offered were used, the developer handled all implementation related tasks
