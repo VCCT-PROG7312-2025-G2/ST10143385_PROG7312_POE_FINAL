@@ -106,7 +106,14 @@
                         <option value="5">5 - Routine</option>
                     </select>
                 </div>
-                <div class="col-md-3 d-flex align-items-end">
+
+               
+                <div class="col-md-3">
+                    <label class="form-label small text-muted mb-1">Search by Location</label>
+                    <input type="text" class="form-control form-control-sm" id="searchLocation" placeholder="Type area or location..." />
+                </div>
+
+                <div class="col-md-2 d-flex align-items-end">
                     <button class="btn btn-outline-danger btn-sm w-100 btn-clear" id="clearFilters">
                         Clear Filters
                     </button>
@@ -121,7 +128,7 @@
                         <tr>
                             <th class="ps-4">ID</th>
                             <th>DESCRIPTION</th>
-                            <th>LOCATION</th> 
+                            <th>LOCATION</th>
                             <th>CATEGORY</th>
                             <th>SUBMITTED AT</th>
                             <th>STATUS</th>
@@ -155,21 +162,23 @@
 
             const catFilter = document.getElementById('filterCategory').value;
             const priFilter = document.getElementById('filterPriority').value;
+            const locSearch = document.getElementById('searchLocation').value.trim().toLowerCase(); 
 
             let data = window.repo.getAllSorted();
 
             if (catFilter) data = data.filter(r => r.category === catFilter);
             if (priFilter) data = data.filter(r => r.priority === +priFilter);
+            if (locSearch) data = data.filter(r => r.location && r.location.toLowerCase().includes(locSearch)); 
 
             tbody.innerHTML = data.length === 0
                 ? `<tr><td colspan="7" class="text-center py-5 empty-state">
-                     ${catFilter || priFilter ? 'No requests match your filters.' : 'No requests submitted yet. Be the first!'}
+                     ${catFilter || priFilter || locSearch ? 'No requests match your filters.' : 'No requests submitted yet. Be the first!'}
                    </td></tr>`
                 : data.map(r => `
                     <tr>
                         <td class="ps-4"><code>${r.id}</code></td>
                         <td class="text-truncate" style="max-width: 250px;">${r.description}</td>
-                        <td class="text-truncate">${r.location || '-'}</td> <!-- ✅ Added -->
+                        <td class="text-truncate">${r.location || '-'}</td> <!-- ✅ Location column -->
                         <td><span class="badge bg-light text-dark">${r.category}</span></td>
                         <td class="small text-muted">${r.submittedAt}</td>
                         <td><span class="badge bg-secondary">${r.status}</span></td>
@@ -180,9 +189,11 @@
 
         document.getElementById('filterCategory').onchange = renderTable;
         document.getElementById('filterPriority').onchange = renderTable;
+        document.getElementById('searchLocation').oninput = renderTable; 
         document.getElementById('clearFilters').onclick = () => {
             document.getElementById('filterCategory').value = '';
             document.getElementById('filterPriority').value = '';
+            document.getElementById('searchLocation').value = '';
             renderTable();
         };
 
