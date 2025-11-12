@@ -17,7 +17,8 @@ The goal here is to improve communication, engagement, and transparency between 
 ---
 
 ## Project Structure
-- `Controllers/` 
+- `Controllers/`
+- `Data/` 
 - `Models/` 
 - `Views/`  
 - `wwwroot/` 
